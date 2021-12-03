@@ -89,3 +89,5 @@ console.log(checkInputSlidingWindow(readTextInput('input.txt')));
 /**
  * End of Part 2
  */
+
+// Finished at: 20:22
