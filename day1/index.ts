@@ -1,13 +1,11 @@
 // --- Day 1: Sonar Sweep ---
 // Started at: 19:36
 
-import fs from 'fs';
+import { stringToNumbersArray, readInputFromPath } from '../helpers.js';
 
 /**
  * Part 1
  */
-const stringToNumbersArray = (text: string) => text.split('\n').map(el => parseInt(el, 10));
-
 const exampleInput = stringToNumbersArray(`199
 200
 208
@@ -51,17 +49,8 @@ const checkInput = (input: number[]) => {
   return increases;
 };
 
-const readTextInput = (path: string): any => {
-  try {
-    const data = fs.readFileSync(path, 'utf8');
-    return stringToNumbersArray(data.toString());
-  } catch (e) {
-    console.error('Error:', { e });
-  }
-  return [];
-};
-
-// console.log(checkInput(readTextInput('input.txt')));
+console.log(checkInput(exampleInput));
+console.log(checkInput(stringToNumbersArray(readInputFromPath('input.txt'))));
 
 /**
  * End of Part 1
@@ -84,7 +73,8 @@ const checkInputSlidingWindow = (input: number[]) => {
   return increases;
 };
 
-console.log(checkInputSlidingWindow(readTextInput('input.txt')));
+console.log(checkInputSlidingWindow(exampleInput));
+console.log(checkInputSlidingWindow(stringToNumbersArray(readInputFromPath('input.txt'))));
 
 /**
  * End of Part 2
