@@ -1,1 +1,1 @@
-# For fun, sometimes somewhat drunk and most likely a few days late.
+# For fun, with a beer in hand and most likely a few days late.
